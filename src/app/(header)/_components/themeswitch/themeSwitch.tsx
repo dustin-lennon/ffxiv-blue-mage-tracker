@@ -1,10 +1,14 @@
+"use client";
+
+import * as React from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 
