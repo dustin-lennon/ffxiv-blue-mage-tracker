@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Logo() {
+export const Logo = () => {
   return (
     <>
       <Image
@@ -8,9 +8,13 @@ export function Logo() {
         width={96}
         height={96}
         alt="Logo"
-        className="h-auto w-auto"
+        data-loaded="false"
+        onLoad={(event) => {
+          event.currentTarget.setAttribute("data-loaded", "true");
+        }}
+        className="data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10"
       />
       Blue Mage Spell Tracker
     </>
   );
-}
+};

@@ -1,6 +1,6 @@
 import { Header } from "./(header)/_components/header/header";
 import { MobileHeader } from "./(header)/_components/mobileHeader/mobileHeader";
-import { NavAndContent } from "./(main)/_components/navAndContent";
+import { NavAndContent } from "./(main)/_components/navAndContent/navAndContent";
 
 export default async function Home() {
   return (

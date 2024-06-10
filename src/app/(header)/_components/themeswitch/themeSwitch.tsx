@@ -12,7 +12,7 @@ import {
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 
-export function ThemeSwitch() {
+export const ThemeSwitch = () => {
   const { setTheme } = useTheme();
 
   return (
@@ -37,4 +37,4 @@ export function ThemeSwitch() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};

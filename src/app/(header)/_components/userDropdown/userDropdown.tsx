@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 
-export function UserDropdown() {
+export const UserDropdown = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -36,4 +36,4 @@ export function UserDropdown() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};

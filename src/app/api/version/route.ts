@@ -5,7 +5,6 @@ import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
 
-export async function GET(request: NextRequest) {  // Use 'GET' instead of 'handler'
-  console.log('API Route Triggered:', publicRuntimeConfig.version);
+export async function GET(_request: NextRequest) {  // Use 'GET' instead of 'handler'
   return NextResponse.json({ version: publicRuntimeConfig.version });
 }
