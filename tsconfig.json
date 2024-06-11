@@ -35,6 +35,7 @@
     "**/*.tsx",
     "**/*.mjs",
     "**/*.js",
-    ".next/types/**/*.ts", "src/app/(header)/_components/appVersion/appVersion.tsx", "src/app/(header)/_components/appVersion/appVersion.tsx.bk2"],
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -4,6 +4,9 @@ import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AppProvider } from "./provider";
+import { Header } from "./_components/_header/header/header";
+import { MobileHeader } from "./_components/_header/mobileHeader/mobileHeader";
+import { Navigation } from "./_components/_navigation/navigation/navigation";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,7 +38,17 @@ export default function RootLayout({
             defaultTheme="dark"
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex h-full w-full flex-col">
+              <Header />
+              <MobileHeader />
+              <div className="h-px w-screen bg-border"></div>
+              <div className="flex sm:h-[calc(100vh-6rem-1px)]">
+                <div className="mx-auto flex min-w-0 max-w-7xl grow flex-col sm:flex-row sm:py-6">
+                  <Navigation />
+                  {children}
+                </div>
+              </div>
+            </div>
           </ThemeProvider>
         </AppProvider>
       </body>
