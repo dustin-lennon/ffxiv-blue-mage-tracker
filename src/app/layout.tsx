@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "h-screen w-screen bg-background font-sans text-foreground",
+          "h-screen w-screen overflow-hidden bg-background font-sans text-foreground",
           fontSans.variable,
         )}
       >
