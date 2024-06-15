@@ -3,7 +3,7 @@
     /* Base Options */
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "esnext",
+    "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -15,7 +15,7 @@
     "checkJs": true,
 
     /* Bundled projects */
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es2022"],
     "noEmit": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -36,6 +36,6 @@
     "**/*.mjs",
     "**/*.js",
     ".next/types/**/*.ts"
-, "src/app/loading.tsx.bk"  ],
+  ],
   "exclude": ["node_modules"]
 }
