@@ -1,42 +1,38 @@
+import BlueSpellBook from "@/components/BlueSpells";
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
-interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
-
-const getData = async (): Promise<Todo[]> => {
-  const result = await fetch("https://jsonplaceholder.typicode.com/todos/");
-
-  // delay the response
-  await new Promise((resolve) => setTimeout(resolve, 10000));
-
-  return result.json() as Promise<Todo[]>;
-};
-
-const Home = async () => {
-  const data = await getData();
-
+const Home = () => {
   return (
     <div className="flex w-screen grow flex-col overflow-y-auto px-4 sm:w-full sm:p-6">
-      <div className="grid grid-cols-4 gap-8">
-        {data.map((todo) => (
-          <Card key={todo.id} className="flex flex-col justify-between">
-            <CardHeader className="flex-row items-center gap-4">
-              {todo.title}
-            </CardHeader>
-            <CardContent>{todo.title}</CardContent>
-            <CardFooter>{todo.completed.toString()}</CardFooter>
-          </Card>
-        ))}
+      <h1 className="text-center text-3xl font-bold">Blue Mage Spellbook</h1>
+      <div className="my-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <BlueSpellBook />
       </div>
+      {/* HOW TO SERVER SIDE RENDER THIS? */}
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink href="#">1</PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationEllipsis />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="#" />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
     </div>
   );
 };

@@ -36,6 +36,6 @@
     "**/*.mjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
+, "src/app/loading.tsx.bk"  ],
   "exclude": ["node_modules"]
 }
